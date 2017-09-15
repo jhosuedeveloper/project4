@@ -70,21 +70,6 @@ class Poloniex extends Component {
 
     return (
       <div>
-
-    <div>  {this.state.poloniexspotBTCBase}</div>
-    <div>  {this.state.poloniexspotBTCCurrency}</div>
-    <div>  {this.state.poloniexspotBTCAmount}</div>
-
-    <div>  {this.state.poloniexspotETHBase}</div>
-    <div>  {this.state.poloniexspotETHCurrency}</div>
-    <div>  {this.state.poloniexspotETHAmount}</div>
-
-    <div>  {this.state.poloniexspotLTCBase}</div>
-    <div>  {this.state.poloniexspotLTCCurrency}</div>
-    <div>  {this.state.poloniexspotLTCAmount}</div>
-
-
-
       </div>
     )
   }

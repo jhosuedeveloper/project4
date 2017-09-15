@@ -94,26 +94,6 @@ class EthereumCoinbase
 
     return (
       <div>
-      SPOT
-      <div className="values">BASE:{this.state.coinbasespotBase} </div>
-      <div className="values">CURRENCY: {this.state.coinbasespotCurrency} </div>
-      <div className="values">AMOUNT: {this.state.coinbasespotAmount} </div>
-      BUY:
-      <div className="values">BASE:{this.state.coinbasebuyBase} </div>
-      <div className="values">CURRENCY: {this.state.coinbasebuyCurrency} </div>
-      <div className="values">AMOUNT: {this.state.coinbasebuyAmount} </div>
-      SELL:
-      <div className="values">BASE:{this.state.coinbasesellBase} </div>
-      <div className="values">CURRENCY: {this.state.coinbasesellCurrency} </div>
-      <div className="values">AMOUNT: {this.state.coinbasesellAmount} </div>
-
-
-{100*(this.state.coinbasebuyAmount-this.state.coinbasespotAmount)/this.state.coinbasespotAmount}
-<div>{this.state.coinbasebuyAmount-this.state.coinbasespotAmount}</div>
-{100*(this.state.coinbasespotAmount-this.state.coinbasesellAmount)/this.state.coinbasespotAmount}
-<div>{this.state.coinbasespotAmount-this.state.coinbasesellAmount}</div>
-
-
 
       </div>
     )
