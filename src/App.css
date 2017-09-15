@@ -6,8 +6,29 @@ header h1{
 
 main{
   display: flex;
+  flex-direction: column;
 }
 
 .coin{
   padding: 80px;
 }
+
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+
+.dollars:before { content:'$'; }

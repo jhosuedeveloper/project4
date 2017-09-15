@@ -6,6 +6,7 @@ import Gdax from './gdaxExchange/Gdax.js'
 import EthereumCoinbase from './coinbaseExchange/EthereumCoinbase.js'
 import LitecoinCoinbase from './coinbaseExchange/LitecoinCoinbase.js'
 import NumericLabel from 'react-pretty-numbers'
+import NumberFormat from 'react-number-format'
 
 class App extends Component {
 
@@ -299,9 +300,56 @@ componentDidMount(){
           <h1>gdaxLTC ----> {this.state.gdaxLTC}</h1>
 
 
-          <NumericLabel params={params}>{this.state.gdaxLTC}</NumericLabel>;
+
+
 
             <main>
+
+              <table>
+                <caption>COINBASE</caption>
+                <tr>
+                  <td>BTC</td>
+                  <td>ETH</td>
+                  <td>LTC</td>
+                </tr>
+                <tr>
+                  <td>${parseFloat(this.state.coinbaseBTC).toFixed(2)} </td>
+                  <td>${parseFloat(this.state.coinbaseETH).toFixed(2)} </td>
+                  <td>${parseFloat(this.state.coinbaseLTC).toFixed(2)}  </td>
+                </tr>
+              </table>
+
+
+              <table>
+          <caption>POLONIEX</caption>
+                <tr>
+                  <td>BTC</td>
+                  <td>ETH</td>
+                  <td>LTC</td>
+                </tr>
+                <tr>
+                  <td>${parseFloat(this.state.poloniexBTC).toFixed(2)} </td>
+                  <td>${parseFloat(this.state.poloniexETH).toFixed(2)} </td>
+                  <td>${parseFloat(this.state.poloniexLTC).toFixed(2)}  </td>
+                </tr>
+              </table>
+
+
+              <table>
+              <caption>GADAX</caption>
+
+                <tr>
+                  <td>BTC</td>
+                  <td>ETH</td>
+                  <td>LTC</td>
+                </tr>
+                <tr>
+                  <td>${parseFloat(this.state.gdaxBTC).toFixed(2)} </td>
+                  <td>${parseFloat(this.state.gdaxETH).toFixed(2)} </td>
+                  <td>${parseFloat(this.state.gdaxLTC).toFixed(2)}  </td>
+                </tr>
+              </table>
+
 
 
 
