@@ -44,7 +44,7 @@ class Poloniex extends Component {
           poloniexspotETHAmount: response.data['USDT_ETH']['last'],
           poloniexspotLTCAmount: response.data['USDT_LTC']['last']
         })
-
+        this.props.handlepoloniexBTCETHLTC(response.data['USDT_BTC']['last'], response.data['USDT_ETH']['last'], response.data['USDT_LTC']['last'])
       })
       .catch((error) => {
         console.log(error)

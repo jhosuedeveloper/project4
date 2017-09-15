@@ -36,43 +36,30 @@ class Gdax extends Component {
 
     setInterval(() => {
 
-      axios.get('https://api.gdax.com/products/BTC-USD/ticker')
-      .then((response) => {
+
+
+
+
+      function getBTH(){
+        return axios.get('https://api.gdax.com/products/BTC-USD/ticker')
+      }
+      function getETH(){
+        return axios.get('https://api.gdax.com/products/ETH-USD/ticker')
+      }
+      function getLTC(){
+        return axios.get('https://api.gdax.com/products/LTC-USD/ticker')
+      }
+
+      axios.all([getBTH(), getETH(), getLTC()])
+      .then(axios.spread((res1, res2, res3)=> {
         this.setState({
-          gdaxspotBTCAmount: response.data['price']
+          gdaxspotBTCAmount: res1.data['price'],
+          gdaxspotETHAmount: res2.data['price'],
+          gdaxspotLTCAmount: res3.data['price']
         })
-        console.log(response)
-      })
-      .catch((error) => {
-        console.log(error)
-      })
 
-
-
-      axios.get('https://api.gdax.com/products/ETH-USD/ticker')
-      .then((response) => {
-        this.setState({
-          gdaxspotETHAmount: response.data['price']
-        })
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-
-
-
-      axios.get('https://api.gdax.com/products/LTC-USD/ticker')
-      .then((response) => {
-        this.setState({
-          gdaxspotLTCAmount: response.data['price']
-        })
-      })
-      .catch((error) => {
-        console.log(error)
-      })
-
-
-
+            this.props.handlegdaxBTCETHLTC(res1.data['price'], res2.data['price'], res3.data['price'])
+      }))
 
 
     }, 1000 )
