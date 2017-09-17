@@ -32,7 +32,7 @@ class App extends Component {
       arbt7: false,
       arbt8: false,
       arbt9: false,
-      triggerPercent: 5, //percent
+      triggerPercent: 1, //percent
       btcmsg1: '',
       btcmsg2: '',
       btcmsg3: '',
@@ -322,7 +322,7 @@ class App extends Component {
 
 
   handleChange(event) {
-
+  event.preventDefault();
     console.log(event.target.value)
     this.setState({
       triggerPercent: event.target.value
@@ -408,13 +408,20 @@ class App extends Component {
 
 
 
-          <form >
-            <label>
-              Change Percent Arbitrage:
-              <input type="number" value={this.state.triggerPercent} onChange={this.handleChange} />
-            </label>
 
-          </form>
+CURRENT PERCENT: {this.state.triggerPercent}
+
+<form>
+  <label className="inputNum" onSubmit={this.handleSubmit}>
+    PERCENT ARBITRAGE:
+    <input type="float" value={this.state.triggerPercent} onChange={this.handleChange} />
+  </label>
+</form>
+
+
+
+
+
 
 
           <div>

@@ -45,7 +45,7 @@ tr:nth-child(even) {
 .green{
   border-radius: 23px;
   /*background-color: #8BFFD1;*/
-  background-color: #5BCC5F;
+  background-color: #E0FFA5;
   border-color: black;
   border-style: solid;
   margin: 10px;
@@ -64,4 +64,10 @@ tr:nth-child(even) {
     font-size: 15px;
     text-align: center;
 
+}
+
+.inputNum{
+  font-family: 'Poppins', sans-serif;
+  font-size: 15px;
+  text-align: center;
 }
