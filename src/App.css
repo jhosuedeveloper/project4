@@ -42,7 +42,24 @@ tr:nth-child(even) {
   margin: 10px;
 }
 
+.green{
+  border-radius: 23px;
+  /*background-color: #8BFFD1;*/
+  background-color: #5BCC5F;
+  border-color: black;
+  border-style: solid;
+  margin: 10px;
+}
+
+
 .info h1{
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    text-align: center;
+
+}
+
+.green h1{
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     text-align: center;

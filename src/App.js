@@ -418,54 +418,55 @@ class App extends Component {
 
 
           <div>
-            <div className="info"><h1> Coinbase vs Poloniex    -   {this.state.btcmsg1}</h1></div>
-            <div className="info"><h1> Coinbase vs Gadax       -   {this.state.btcmsg2}</h1></div>
-            <div className="info"><h1> Poloniex vs Gdax        -   {this.state.btcmsg3}</h1></div>
-            <div className="info"><h1> Coinbase vs Poloniex    -   {this.state.ethmsg1}</h1></div>
-            <div className="info"><h1> Coinbase vs Gadax       -   {this.state.ethmsg2}</h1></div>
-            <div className="info"><h1> Poloniex vs Gdax        -   {this.state.ethmsg3}</h1></div>
-            <div className="info"><h1> Coinbase vs Poloniex    -   {this.state.ltcmsg1}</h1></div>
-            <div className="info"><h1> Coinbase vs Gadax       -   {this.state.ltcmsg2}</h1></div>
-            <div className="info"><h1>Poloniex vs Gdax         - {this.state.ltcmsg3}</h1></div>
-            <div className="info"><h1> Percent Trigger {this.state.triggerPercent}</h1> </div>
-          </div>
+
+            {this.state.arbt1?<div className="green"><h1> Coinbase vs Poloniex    -   {this.state.btcmsg1}</h1></div> : <div className="info"><h1> Coinbase vs Poloniex    -   {this.state.btcmsg1}</h1></div>}
+            {this.state.arbt2?<div className="green"><h1> Coinbase vs Gdax        -   {this.state.btcmsg2}</h1></div> : <div className="info"><h1> Coinbase vs Gdax        -   {this.state.btcmsg2}</h1></div>}
+            {this.state.arbt3?<div className="green"><h1> Poloniex vs Gdax        -   {this.state.btcmsg3}</h1></div> : <div className="info"><h1> Poloniex vs Gdax        -   {this.state.btcmsg3}</h1></div>}
+            {this.state.arbt4?<div className="green"><h1> Coinbase vs Poloniex    -   {this.state.ethmsg1}</h1></div> : <div className="info"><h1> Coinbase vs Poloniex    -   {this.state.ethmsg1}</h1></div>}
+            {this.state.arbt5?<div className="green"><h1> Coinbase vs Gadax       -   {this.state.ethmsg2}</h1></div> : <div className="info"><h1> Coinbase vs Gadax       -   {this.state.ethmsg2}</h1></div>}
+            {this.state.arbt6?<div className="green"><h1> Poloniex vs Gdax        -   {this.state.ethmsg3}</h1></div> : <div className="info"><h1> Poloniex vs Gdax        -   {this.state.ethmsg3}</h1></div>}
+            {this.state.arbt7?<div className="green"><h1> Coinbase vs Poloniex    -   {this.state.ltcmsg1}</h1></div> : <div className="info"><h1> Coinbase vs Poloniex    -   {this.state.ltcmsg1}</h1></div>}
+            {this.state.arbt8?<div className="green"><h1> Coinbase vs Gdax        -   {this.state.ltcmsg2}</h1></div> : <div className="info"><h1> Coinbase vs Gdax        -   {this.state.ltcmsg2}</h1></div>}
+            {this.state.arbt9?<div className="green"><h1> Poloniex vs Gdax        -   {this.state.ltcmsg3}</h1></div> : <div className="info"><h1> Poloniex vs Gdax        -   {this.state.ltcmsg3}</h1></div>}
+
+</div>
 
 
 
-          <div className='coin'>
-            <BitcoinCoinbase
-              handlecoinbaseBTH={(bitcoin)=> this.handlecoinbaseBTH(bitcoin)}
-              />
-          </div>
-          <div className='coin'>
-            <EthereumCoinbase
-              handlecoinbaseETH={(ethereum)=> this.handlecoinbaseETH(ethereum)}
-              />
-          </div>
-          <div className='coin'>
-            <LitecoinCoinbase
-              handlecoinbaseLTC={(litecoin)=> this.handlecoinbaseLTC(litecoin)}
-              />
-          </div>
-          <div className='coin'>
-            <Poloniex
-              handlepoloniexBTCETHLTC={(bitcoin, ethereum, litecoin)=> this.handlepoloniexBTCETHLTC(bitcoin, ethereum, litecoin)}
-              />
-          </div>
-          <div className='coin'>
-            <Gdax
-              handlegdaxBTCETHLTC={(bitcoin, ethereum, litecoin)=> this.handlegdaxBTCETHLTC(bitcoin, ethereum, litecoin)}
-              />
-          </div>
+<div className='coin'>
+  <BitcoinCoinbase
+    handlecoinbaseBTH={(bitcoin)=> this.handlecoinbaseBTH(bitcoin)}
+    />
+</div>
+<div className='coin'>
+  <EthereumCoinbase
+    handlecoinbaseETH={(ethereum)=> this.handlecoinbaseETH(ethereum)}
+    />
+</div>
+<div className='coin'>
+  <LitecoinCoinbase
+    handlecoinbaseLTC={(litecoin)=> this.handlecoinbaseLTC(litecoin)}
+    />
+</div>
+<div className='coin'>
+  <Poloniex
+    handlepoloniexBTCETHLTC={(bitcoin, ethereum, litecoin)=> this.handlepoloniexBTCETHLTC(bitcoin, ethereum, litecoin)}
+    />
+</div>
+<div className='coin'>
+  <Gdax
+    handlegdaxBTCETHLTC={(bitcoin, ethereum, litecoin)=> this.handlegdaxBTCETHLTC(bitcoin, ethereum, litecoin)}
+    />
+</div>
 
-        </main>
-
-
+</main>
 
 
-      </div>
-    );
-  }
+
+
+</div>
+);
+}
 }
 
 export default App;

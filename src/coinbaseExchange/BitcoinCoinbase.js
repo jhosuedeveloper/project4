@@ -37,7 +37,7 @@ class BitcoinCoinbase extends Component {
 
     setInterval(() => {
 
-      axios.get('https:/api.coinbase.com/v2/prices/BTC-USD/spot')
+      axios.get('https://api.coinbase.com/v2/prices/BTC-USD/spot')
       .then((response) => {
         this.setState({
           coinbasespotBase: response.data['data']['base'],
@@ -51,7 +51,7 @@ class BitcoinCoinbase extends Component {
       })
 
 
-      axios.get('https:/api.coinbase.com/v2/prices/BTC-USD/buy')
+      axios.get('https://api.coinbase.com/v2/prices/BTC-USD/buy')
       .then((response) => {
         this.setState({
           coinbasebuyBase: response.data['data']['base'],
@@ -64,7 +64,7 @@ class BitcoinCoinbase extends Component {
       })
 
 
-      axios.get('https:/api.coinbase.com/v2/prices/BTC-USD/sell')
+      axios.get('https://api.coinbase.com/v2/prices/BTC-USD/sell')
       .then((response) => {
         this.setState({
           coinbasesellBase: response.data['data']['base'],
